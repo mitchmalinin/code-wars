@@ -8,7 +8,7 @@ Name: Format a string of names like 'Bart, Lisa & Maggie'.
 - Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.
 
 My Solution:
-
+```
 function list(names) {
   let newArr = []
   let finalString;
@@ -29,5 +29,5 @@ function list(names) {
   }
   return finalString
 }
-
+```
 # Challange 2
