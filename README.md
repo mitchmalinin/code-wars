@@ -1,6 +1,6 @@
 # code-wars
 
-This is where I do my daily code wars challanges.
+This is where I post my code wars challanges.
 
 # Challange 1
 Name: Format a string of names like 'Bart, Lisa & Maggie'.
