@@ -54,3 +54,16 @@ string = string.replace(/[^A-Za-z']/g, "").toLowerCase();
   }
 }
 ```
+# Challange 3
+Name: List Filtering
+- In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+My Solution:
+```
+function filter_list(l) {
+let newArr = l.filter((elm)=>{
+  return typeof elm === 'number';
+})
+  return newArr
+}
+```
