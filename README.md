@@ -67,3 +67,35 @@ let newArr = l.filter((elm)=>{
   return newArr
 }
 ```
+# Challange 4
+Name: Find the missing letter
+- Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+- You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+- The array will always contain letters in only one case.
+
+My Solution:
+```
+function findMissingLetter(array)
+
+{
+  let missingValue;
+  let finalLetter;
+  let newArr = [];
+ let stringArr = array.toString().split(',')
+ stringArr.forEach((letter)=>{
+   newArr.push(letter.charCodeAt(0))
+ })
+ 
+  for(i = 0; i < newArr.length-1; i++){
+    if(newArr[i] + 1 == newArr[i+1]){
+      console.log("true")
+    }
+    else{
+      console.log(newArr[i])
+      missingValue = newArr[i]+1
+    }
+  }
+finalLetter = String.fromCharCode(missingValue) 
+return finalLetter
+}
+```
