@@ -99,3 +99,23 @@ finalLetter = String.fromCharCode(missingValue)
 return finalLetter
 }
 ```
+
+# Challange 5
+Name: Fake Binary
+- Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+My Solution:
+```
+function fakeBin(x){
+let newArr = x.split('')
+newArr.forEach((num,i)=>{
+  if(num < 5){
+   newArr[i] = 0
+  }
+  else{
+    newArr[i] = 1
+  }
+})
+return newArr.join('')
+}
+```
