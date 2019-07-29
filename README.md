@@ -131,22 +131,23 @@ My Solution:
 ```
 function declareWinner(fighter1, fighter2,firstAttacker) {
   let winner = ""
+  
   if (firstAttacker === fighter1.name){
-   while(fighter1.health >= 0 && fighter2.health >= 0){
+   while(fighter1.health > 0 &&  fighter2.health > 0){
       fighter2.health = fighter2.health - fighter1.damagePerAttack;
-      if(fighter1.health <= 0){
-        winner = fighter2.name
+      if(fighter2.health <= 0){
+        winner = fighter1.name
       }
       else{
          fighter1.health = fighter1.health - fighter2.damagePerAttack;
-         if(fighter2.health <= 0){
-           winner = fighter1.name
+         if(fighter1.health <= 0){
+           winner = fighter2.name
          }
       }
     } 
   }
   else{
-     while(fighter1.health >= 0 && fighter2.health >= 0){
+     while(fighter1.health > 0 &&  fighter2.health > 0){
       fighter1.health = fighter1.health - fighter2.damagePerAttack;
       if(fighter1.health <= 0){
         winner = fighter2.name
@@ -159,8 +160,6 @@ function declareWinner(fighter1, fighter2,firstAttacker) {
       }
     }
   }
-  
 return winner;
-
 }
 ```
