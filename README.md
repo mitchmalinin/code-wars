@@ -3,6 +3,7 @@
 This is where I post my code wars challanges.
 
 # Challange 1
+kyu: 6
 Name: Format a string of names like 'Bart, Lisa & Maggie'.
 - Given: an array containing hashes of names
 - Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.
@@ -32,6 +33,7 @@ function list(names) {
 ```
 # Challange 2
 Name: Detect Pangram 
+kyu: 6
 - A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 - Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
@@ -55,6 +57,7 @@ string = string.replace(/[^A-Za-z']/g, "").toLowerCase();
 }
 ```
 # Challange 3
+kyu: 7
 Name: List Filtering
 - In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
@@ -69,6 +72,7 @@ let newArr = l.filter((elm)=>{
 ```
 # Challange 4
 Name: Find the missing letter
+kyu: 6
 - Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
 - You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
 - The array will always contain letters in only one case.
@@ -102,6 +106,7 @@ return finalLetter
 
 # Challange 5
 Name: Fake Binary
+kyu: 7
 - Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 
 My Solution:
@@ -121,6 +126,7 @@ return newArr.join('')
 ```
 
 # Challange 6
+kyu: 7
 Name: Two fighters, one winner.
 - Create a function that returns the name of the winner in a fight between two fighters.
 - Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
@@ -163,3 +169,31 @@ function declareWinner(fighter1, fighter2,firstAttacker) {
 return winner;
 }
 ```
+
+# Challange 7
+kyu: 7
+Name: Make a function that does arithmetic!
+- Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
+- a and b will both be positive integers, and a will always be the first number in the operation, and b always the second.
+- The four operators are "add", "subtract", "divide", "multiply".
+
+My Solution:
+```
+function arithmetic(a, b, operator){
+  switch (operator){
+  case "add":
+  return a + b;
+  break;
+  case "subtract":
+  return a - b;
+  break;
+  case "multiply":
+  return a * b;
+  break;
+  case "divide":
+  return a / b;
+  break;
+  }
+} 
+```
+
