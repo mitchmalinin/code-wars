@@ -200,3 +200,34 @@ function arithmetic(a, b, operator){
 } 
 ```
 
+# Challange 7
+
+Name:Sum of odd numbers
+- kyu: 7
+- Given the triangle of consecutive odd numbers:
+- example:            1
+                   3     5
+                 7     9    11
+             13    15    17    19
+          21    23    25    27    29
+- Calculate the row sums of this triangle from the row index (starting at index 1) e.g.:
+
+My Solution:
+```
+function rowSumOddNumbers(n) {
+  let oddNum = 1
+  let obj = {}
+    for(let i = 1; i <= n; i++){
+        let test = Array(i)
+        for(let j = 0;j < test.length; j++){
+          test[j] = oddNum
+          oddNum = oddNum + 2
+        }
+        obj[i] = test
+      }
+ return obj[n].reduce((a,b)=>{
+    return a + b
+ })
+}
+```
+
