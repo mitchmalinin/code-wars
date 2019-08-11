@@ -205,7 +205,8 @@ function arithmetic(a, b, operator){
 Name:Sum of odd numbers
 - kyu: 7
 - Given the triangle of consecutive odd numbers:
-```example:            1
+- eample: 
+```                    1
                    3     5
                  7     9    11
              13    15    17    19
