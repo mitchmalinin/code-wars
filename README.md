@@ -200,7 +200,7 @@ function arithmetic(a, b, operator){
 } 
 ```
 
-# Challange 7
+# Challange 8
 
 Name:Sum of odd numbers
 - kyu: 7
