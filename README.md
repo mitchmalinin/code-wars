@@ -202,7 +202,7 @@ function arithmetic(a, b, operator){
 
 # Challange 8
 
-Name:Sum of odd numbers
+Name: Sum of odd numbers
 - kyu: 7
 - Given the triangle of consecutive odd numbers:
 - example: 
@@ -235,7 +235,7 @@ function rowSumOddNumbers(n) {
 ```
 # Challange 9
 
-Name:Break camelCase
+Name: Break camelCase
 - kyu: 6
 - Complete the solution so that the function will break up camel casing, using a space between words.
 
@@ -251,4 +251,18 @@ function solution(string) {
   return string.join("")
 }
 ```
+# Challange 10
+
+Name: The highest profit wins!
+- kyu: 7
+- Write a function that returns both the minimum and maximum number of the given list/array.
+
+My Solution:
+```
+function minMax(arr){ 
+  return [Math.min(...arr),Math.max(...arr)];
+}
+
+```
+
 
