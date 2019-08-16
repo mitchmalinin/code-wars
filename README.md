@@ -265,4 +265,31 @@ function minMax(arr){
 
 ```
 
+# Challange 11
+** CODE WARS WAS DOWN THIS DAY, SO I DID AN ALGODAILY PROBLEM. **
+- You are given a string that contains alphabetical characters (a - z, A - Z) and some other characters ($, !, etc.). For example, one input may be:
+- 'sea!$hells3'
+- Can you reverse only the alphabetical ones?
+
+My Solution:
+```
+ function reverseOnlyAlphabetical(str) {
+  let count = 0;
+  str = str.split("");
+  let filteredArr = str.filter((char)=>{
+      return char.match(/[a-zA-Z]+/g);
+  });
+  filteredArr.reverse();
+  str.forEach((char,i)=>{
+    if(char.match(/[a-zA-Z]+/g)){
+      console.log(count);
+      str[i] = filteredArr[count];
+      count++;
+           console.log(count);
+    }
+  });
+  return str.join("");
+}
+
+```
 
