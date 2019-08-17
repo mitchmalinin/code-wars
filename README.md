@@ -267,6 +267,8 @@ function minMax(arr){
 
 # Challange 11
 ** CODE WARS WAS DOWN THIS DAY, SO I DID AN ALGODAILY PROBLEM. **
+Name: Reverse Only Alphabetical
+
 - You are given a string that contains alphabetical characters (a - z, A - Z) and some other characters ($, !, etc.). For example, one input may be:
 - 'sea!$hells3'
 - Can you reverse only the alphabetical ones?
@@ -292,4 +294,20 @@ My Solution:
 }
 
 ```
+# Challange 12
+** CODE WARS WAS STILL DOWN THIS DAY, SO I DID AN ALGODAILY PROBLEM. **
+Name: Is An Anagram
+
+- We are given two strings like "cinema" and "iceman" as inputs. Can you write a method isAnagram(str1, str2) that will return  true or false depending on whether the strings are anagrams of each other?
+
+My Solution:
+```
+function isAnagram(str1, str2) {
+  str1 = str1.toLowerCase().split("").sort().join("");
+  str2 = str2.toLowerCase().split("").sort().join("");
+  return str1 === str2;
+}
+
+```
+
 
