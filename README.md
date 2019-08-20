@@ -311,7 +311,7 @@ function isAnagram(str1, str2) {
 ```
 # Challange 13
 ** BACK TO CODE WARS **
-Name: Categorize New Member
+Name: Categorize New Member Kyu: 7
 
 - The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
 - To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
@@ -335,5 +335,37 @@ function openOrSenior(data){
 }
 
 ```
+# Challange 14
+Name: Sort the odd
+Kyu: 6
+
+- You have an array of numbers.
+- Your task is to sort ascending odd numbers but even numbers must be on their places.
+- Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.
+
+My Solution:
+
+```
+function sortArray(array) {
+  let count = 0;
+  let oddArray = array.filter((num)=>{
+    if(num != 0 && num % 2 != 0){
+      return num
+    }
+  })
+oddArray.sort((a,b)=>{
+  return  a - b
+});
+  array.forEach((num, i)=>{
+    if(num % 2 != 0){
+      array[i] = oddArray[count]
+      count++
+    }    
+  })
+  return array
+}
+
+```
+
 
 
