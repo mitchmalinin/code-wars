@@ -367,5 +367,22 @@ oddArray.sort((a,b)=>{
 
 ```
 
+# Challange 15
+Name: Extract the domain name from a URL
+Kyu: 5
+
+- Write a function that when given a URL as a string, parses out just the domain 
+My Solution:
+
+```
+
+function domainName(url){
+return url.replace(/^(?:https?:\/\/)?(?:www\.)?(?:http\.)?/i, "").split(".")[0];
+}
+
+```
+
+
+
 
 
