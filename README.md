@@ -383,6 +383,27 @@ return url.replace(/^(?:https?:\/\/)?(?:www\.)?(?:http\.)?/i, "").split(".")[0];
 ```
 
 
+# Challange 16
+Name: Two Sum
+Kyu: 6
+
+- Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indices of these items should then be returned in an array.
+
+My Solution:
+
+```
+function twoSum(numbers, target) {
+  let completedArr;
+  for(let i = 0; i< numbers.length;i++){
+    for(let j = 1; j < numbers.length;j++){
+      if(numbers[i] + numbers[j] == target){
+        return completedArr = [i,j]
+      }
+    }
+  }
+}
+
+```
 
 
 
