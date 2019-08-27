@@ -463,4 +463,33 @@ Array.prototype.odd = function(){
 }
 
 ```
+# Challange 16
+Name: Prefill an Array
+Kyu: 6
+
+- Create the function prefill that returns an array of n elements that all have the same value v. See if you can do this without using a loop.
+- You have to validate input:
+- v can be anything (primitive or otherwise)
+- if v is ommited, fill the array with undefined
+- if n is 0, return an empty array
+- if n is anything other than an integer or integer-formatted string (e.g. '123') that is >=0, throw a TypeError
+- When throwing a TypeError, the message should be n is invalid, where you replace n for the actual value passed to the function.
+
+My Solution:
+
+```
+function prefill(n, v) {
+  if(isNaN(parseInt(n)) || !isNaN(n) && Math.round(n) != n || n < 0){
+    throw new TypeError([`${n} is invalid`])
+  }
+  else {
+  n = parseInt(n)
+  let preFilledArr = new Array(n);
+  preFilledArr.fill(v)
+  return preFilledArr;
+  }
+}
+
+
+```
 
