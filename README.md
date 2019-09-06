@@ -493,3 +493,46 @@ function prefill(n, v) {
 
 ```
 
+# Challange 17
+Name: Exclamation marks series #17: Put the exclamation marks and question marks to the balance, Are they balanced?
+Kyu: 6
+
+- Each exclamation mark weight is 2; Each question mark weight is 3. Put two string left and right to the balance, Are they balanced?
+- If the left side is more heavy, return "Left"; If the right side is more heavy, return "Right"; If they are balanced, return "Balance".
+
+My Solution:
+
+```
+function balance(left,right){
+  let leftTotal = 0;
+  let rightTotal = 0;
+ for(let i = 0;i< left.length;i++){
+   if(left.charAt(i) == "!"){
+     leftTotal += 2
+   }
+   else{
+     leftTotal += 3
+   }
+ }
+ for(let i = 0;i< right.length;i++){
+   if(right.charAt(i) == "!"){
+     rightTotal += 2
+   }
+   else if(right.charAt(i)=="?"){
+     rightTotal += 3
+   }
+ }
+if(leftTotal > rightTotal){
+  return "Left"
+}
+else if(rightTotal >leftTotal  ){
+  return "Right"
+}
+else{
+return "Balance"
+  }
+}
+
+
+```
+
