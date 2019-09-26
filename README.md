@@ -536,3 +536,31 @@ return "Balance"
 
 ```
 
+# Challange 17
+*ALGODAILY CHALLANGE* 
+- Given a string str, can you write a method that will return True if is a palindrome and False if it is not? If you'll     recall, a palindrome is defined as "a word, phrase, or sequence that reads the same backward as forward". For now, assume that we will not have input strings that contain special characters or spaces.
+- For an extra challenge, try to ignore non-alphanumerical characters. The final solution that we present will handle all edge cases.
+
+My Solution: 
+
+```
+function isPalindrome(str) {
+  if(str.indexOf(" ") > 0){
+    str = str.toLowerCase().split(" ").join('').split('').join('')
+    stringToCheck = str.toLowerCase().split(" ").join('').split('').reverse().join('')
+    
+  }
+  
+  else{
+  stringToCheck = str.toLowerCase().split("").reverse().join('');
+  console.log("niz")
+  }
+  
+  if(str == stringToCheck){
+    return true
+  }
+  else{
+    return false;
+  }
+}
+```
