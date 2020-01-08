@@ -635,3 +635,42 @@ var uniqueInOrder=function(iterable){
   return uniqueArr
 }
 ```
+# Challange 21
+- Given a number, return a string with dash'-'marks before and after each odd integer, but do not begin or end the string with a dash mark.
+My Solution: 
+
+```
+function dashatize(num) {
+let newThing = num.toString().split("")
+let endOfArray = newThing.length
+newThing.forEach((elm,i)=>{
+  if(elm == "-"){
+    newThing.splice(i,1)
+  }
+})
+
+if(newThing.length == 1){
+  return newThing.join("")
+}
+newThing.map((elm,i)=>{
+if(elm/1 && elm % 2 != 0 && i != 0 && i != newThing.length-1){
+  newThing[i] = "-" + newThing[i] + "-"
+}
+else if(elm/1 && elm % 2 != 0 && i == 0){
+newThing[i] = newThing[i] + "-"
+}
+else if(elm/1 && elm % 2 != 0 && i == newThing.length-1){
+newThing[i] =  "-"  + newThing[i] 
+}
+  });
+newThing = newThing.join("").split("")
+newThing.forEach((elm,i)=>{
+  console.log(newThing)
+  if(elm == newThing[i+1] && newThing[i+1] == "-" || elm == newThing[i-1] && newThing[i-1] == "-" ){
+    console.log(newThing[i])
+    newThing.splice(i,1)
+  }
+})
+return newThing.join("")
+}
+```
