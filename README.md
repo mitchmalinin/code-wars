@@ -674,3 +674,22 @@ newThing.forEach((elm,i)=>{
 return newThing.join("")
 }
 ```
+# Challange 22
+- The depth of an integer n is defined to be how many multiples of n it is necessary to compute before all 10 digits have appeared at least once in some multiple.
+My Solution: 
+
+```
+function computeDepth(num){
+let multiplier = 0
+let numSet = new Set();
+  while(numSet.size != 10){
+    multiplier++
+    value = num * multiplier+""
+    value = value.split("").forEach((elm)=>{
+    numSet.add(elm)
+    })
+  }
+return multiplier
+}
+```
+
