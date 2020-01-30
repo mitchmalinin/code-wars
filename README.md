@@ -613,6 +613,7 @@ numbers.forEach((elm)=>{
 
 # Challange 20
 - Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
 My Solution: 
 
 ```
@@ -637,6 +638,7 @@ var uniqueInOrder=function(iterable){
 ```
 # Challange 21
 - Given a number, return a string with dash'-'marks before and after each odd integer, but do not begin or end the string with a dash mark.
+
 My Solution: 
 
 ```
@@ -676,6 +678,7 @@ return newThing.join("")
 ```
 # Challange 22
 - The depth of an integer n is defined to be how many multiples of n it is necessary to compute before all 10 digits have appeared at least once in some multiple.
+
 My Solution: 
 
 ```
@@ -691,5 +694,29 @@ let numSet = new Set();
   }
 return multiplier
 }
+```
+# Challange 23
+- In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+- If anything in the text isn't a letter, ignore it and don't return it.
+
+My Solution: 
+
+```
+function alphabetPosition(text) {
+text = text.toLowerCase().replace(/[^a-z]/g, '').split("") 
+let lettersToNumbers = {
+  "a":1,"b":2,"c":3,"d":4,"e":5,"f":6,"g":7,"h":8,"i":9,"j":10,"k":11,"l":12,"m":13,"n":14,"o":15,"p":16,"q":17,"r":18,"s":19,"t":20,"u":21,"v":22,"w":23,"x":24,"y":25,"z":26
+  }
+text.map((elm,i)=>{
+for(key in lettersToNumbers){
+  if(elm == key){
+    text[i] = lettersToNumbers[key]
+    } 
+  }
+})  
+
+return text.join(" ")
+}
+
 ```
 
