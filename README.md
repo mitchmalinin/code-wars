@@ -720,3 +720,26 @@ return text.join(" ")
 
 ```
 
+# Challange 24
+
+- Build Tower by the following given argument:
+- number of floors (integer and always greater than 0).
+- Tower block is represented as *
+
+My Solution: 
+
+```
+function towerBuilder(nFloors) {
+let arr = new Array(nFloors).fill('');
+let addStar = '*'
+const baseStar = '*'
+let space = " "
+  arr.forEach((elm,i)=>{
+  arr[i] = space.repeat(nFloors - 1) + addStar + space.repeat(nFloors - 1)
+  nFloors--
+  addStar =  addStar + baseStar.repeat(2)
+  })
+return arr
+}
+
+```
