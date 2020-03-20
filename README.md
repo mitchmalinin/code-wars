@@ -743,3 +743,30 @@ return arr
 }
 
 ```
+# Challange 24
+
+- Your message is a string containing space separated words.
+- You need to encrypt each word in the message using the following rules:
+- The first letter needs to be converted to its ASCII code.
+- The second letter needs to be switched with the last letter
+
+My Solution: 
+
+```
+var encryptThis = function(text) {
+  let wordArr = text.split(" ");
+  let newArr = wordArr.map((elm)=>{
+    elm = elm.split("");
+    let secondLetter = elm[1];
+    let lastLetter = elm[elm.length-1];
+    elm[0] = elm[0].charCodeAt(0)
+    elm[1] = lastLetter
+    elm[elm.length-1] = secondLetter
+    return elm.join("")
+  })
+  return newArr
+}
+
+
+
+```
