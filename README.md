@@ -767,6 +767,24 @@ var encryptThis = function(text) {
   return newArr
 }
 
+```
 
+# Challange 25
 
+- Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+- It should remove all values from list a, which are present in list b.
+
+My Solution: 
+
+```
+function arrayDiff(a, b) {
+ b.forEach((elm)=>{
+  for(let i = a.length; i >= 0; i--){
+    if(elm === a[i]){
+      a.splice(i,1)
+    }
+  }
+ })
+ return a
+}
 ```
