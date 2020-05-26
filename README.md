@@ -817,13 +817,13 @@ My Solution:
 
 ```
 function digital_root(n) {
- let newNum = n.toString().split('').reduce((a,b)=>{
+ n = n.toString().split('').reduce((a,b)=>{
     return Number(a) + Number(b)
   });
-  if(newNum <  10){
-    return Number(newNum)
+  if(n <  10){
+    return n
   }
- return digital_root(Number(newNum))
+ return digital_root(n)
 }
 
 //TEST
