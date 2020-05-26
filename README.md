@@ -788,3 +788,23 @@ function arrayDiff(a, b) {
  return a
 }
 ```
+# Challange 26
+
+- Given an array, find the integer that appears an odd number of times.
+- There will always be only one integer that appears an odd number of times.
+
+My Solution: 
+
+```
+function findOdd(A) {
+  let nums = {}
+  A.forEach((num)=>{
+    nums[num] === undefined ? nums[num] = 1 : nums[num] = nums[num]+ 1
+  })
+  for (const value in nums){
+    if(nums[value] % 2 != 0){
+      return Number(value)
+    }
+  }
+}
+```
