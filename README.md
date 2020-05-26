@@ -820,11 +820,13 @@ function digital_root(n) {
  let newNum = n.toString().split('').reduce((a,b)=>{
     return Number(a) + Number(b)
   });
-  newNum.toString()
-  if(newNum.length === 1){
+  if(newNum <  10){
     return Number(newNum)
   }
  return digital_root(Number(newNum))
 }
+
+//TEST
+digital_root(456)
 
 ```
