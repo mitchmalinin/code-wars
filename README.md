@@ -850,3 +850,33 @@ function findOutlier(integers){
 findOutlier([0, 1, 2])
 
 ```
+# Challange 29
+
+- Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+My Solution: 
+
+```
+function duplicateCount(text){
+  const numSet = {}
+  let totalNumOfDups = 0;
+  text.toLowerCase().split('').forEach((elm)=>{
+    if(numSet[elm] == undefined){
+      numSet[elm] = 1
+    }
+    else{
+      numSet[elm] = numSet[elm] + 1
+    }
+  })
+  for(key in numSet){
+    if(numSet[key] > 1){
+      totalNumOfDups++
+    }
+  }
+return totalNumOfDups
+}
+
+//TEST
+duplicateCount("aabBcde111")
+
+```
